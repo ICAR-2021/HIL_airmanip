@@ -11,6 +11,25 @@ The UAM model consists of a quadrotor and a 6DoFs manipulator attached under it.
 
 The hardware interface can be any device as long as its position in the space can be commanded (e.g., manipulators and/or haptic interfaces). The hardware also needs a force sensor, to provide the real force feedback at the the UAM.
 
+Installation Instructions - Ubuntu 20.04 with ROS Noetic
+---------------------------------------------------------
+ 1. Install and initialize [ROS Noetic desktop full](http://wiki.ros.org/noetic/Installation/Ubuntu)
+
+ 2. If you don't have ROS a workspace yet, [you can create one](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment#Create_a_ROS_Workspace)
+ 
+ 3. Clone this repository and its dependencies, then compile
+ ```
+ sudo apt install ros-noetic-mavlink
+ source /opt/ros/noetic/setup.bash
+ cd ~/catkin_ws/src/
+ git clone https://github.com/prisma-lab/HIL_airmanip.git
+ git clone https://github.com/ethz-asl/rotors_simulator.git --single-branch
+ git clone https://github.com/ethz-asl/mav_comm --single-branch
+ cd ..
+ rosdep install --from-paths src --ignore-src -r -y
+ catkin_make
+ ```
+ 
 Installation Instructions - Ubuntu 18.04 with ROS Melodic
 ---------------------------------------------------------
  1. Install and initialize ROS Melodic desktop full:
