@@ -22,7 +22,7 @@ Installation Instructions - Ubuntu 20.04 with ROS Noetic
  sudo apt install ros-noetic-mavlink
  source /opt/ros/noetic/setup.bash
  cd ~/catkin_ws/src/
- git clone https://github.com/prisma-lab/HIL_airmanip.git
+ git clone https://github.com/ICAR-2021/HIL_airmanip.git
  git clone https://github.com/ethz-asl/rotors_simulator.git --single-branch
  git clone https://github.com/ethz-asl/mav_comm --single-branch
  cd ..
