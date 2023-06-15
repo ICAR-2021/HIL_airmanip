@@ -56,6 +56,29 @@ Installation Instructions - Ubuntu 18.04 with ROS Melodic
  $ catkin_make
 ```
 
+Docker
+---------------------------------------------------------
+Prerequisites: 
+[Docker](https://docs.docker.com/engine/install/ubuntu/), 
+[NVIDIA Contanier Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html), 
+[OSRF Rocker ](https://github.com/osrf/rocker)
+
+Build: 
+```
+docker build -t hil_airmanip .
+```
+
+Execute:
+```
+rocker --x11 --nvidia --name hil_airmanip hil_airmanip
+```
+
+Run in container:
+```
+source catkin_ws/devel/setup.bash
+roslaunch aerialmanip_control aerial_manipulator.launch
+```
+
 Folders
 ---------------------------------------------------------
 **aerialmanip_control**
