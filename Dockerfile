@@ -10,6 +10,9 @@ RUN cd /catkin_ws \
  && /bin/bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash && apt-get update && rosdep install --as-root apt:false --from-paths src --ignore-src -r -y" \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
- 
+
+SHELL ["/bin/bash", "-c"]
+
 RUN cd /catkin_ws \
- && /bin/bash -c "source /opt/ros/${ROS_DISTRO}/setup.bash && catkin_make"
+ && source /opt/ros/${ROS_DISTRO}/setup.bash \
+ && catkin_make
