@@ -60,7 +60,7 @@ Docker
 ---------------------------------------------------------
 Prerequisites: 
 [Docker](https://docs.docker.com/engine/install/ubuntu/), 
-[NVIDIA Contanier Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html), 
+[NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html), 
 [OSRF Rocker ](https://github.com/osrf/rocker)
 
 Build: 
